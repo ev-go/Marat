@@ -9,36 +9,25 @@ func main() {
 	fmt.Scan(&operation)
 	var firstnumber, secondnumber int
 
+	fmt.Println("Введите два числа:\nВведите первое чило:")
+	fmt.Scan(&firstnumber)
+	fmt.Println("Введите второе число:")
+	fmt.Scan(&secondnumber)
+
 	if operation == "+" {
-		fmt.Println("Введите два числа:\nВведите первое чило:")
-		fmt.Scan(&firstnumber)
-		fmt.Println("Введите второе число:")
-		fmt.Scan(&secondnumber)
 		resultOfadding := adding(firstnumber, secondnumber)
 		fmt.Println("Сложение  a и b:", resultOfadding)
 	}
 	if operation == "-" {
-		fmt.Println("Введите два числа:\nВведите первое чило:")
-		fmt.Scan(&firstnumber)
-		fmt.Println("Введите второе число:")
-		fmt.Scan(&secondnumber)
 		resultOfminus := minus(firstnumber, secondnumber)
 		fmt.Println("ВЫчитание чисел a и b:", resultOfminus)
 	}
 	if operation == "*" {
-		fmt.Println("Введите два числа:\nВведите первое чило:")
-		fmt.Scan(&firstnumber)
-		fmt.Println("Введите второе число:")
-		fmt.Scan(&secondnumber)
 		resultOfmulti := multi(firstnumber, secondnumber)
 		fmt.Println("Произведение числа a и b:", resultOfmulti)
 	}
 
 	if operation == "/" {
-		fmt.Println("Введите два числа:\nВведите первое чило:")
-		fmt.Scan(&firstnumber)
-		fmt.Println("Введите второе число:")
-		fmt.Scan(&secondnumber)
 		resultOfdiv := div(firstnumber, secondnumber)
 		fmt.Println("Деление чисел a и b:", resultOfdiv)
 	}
