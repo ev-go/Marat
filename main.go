@@ -3,20 +3,46 @@ package main
 import "fmt"
 
 func main() {
+	fmt.Println("Добро пожаловать это калькулятор:")
+	fmt.Println("Выберете операцию где \n+ это сложение\n- это вычитание\n* это умножение\n/ это деление")
+	var operation string
+	fmt.Scan(&operation)
 	var firstnumber, secondnumber int
-	fmt.Println("Введите два числа:\nВведите первое чило:")
-	fmt.Scan(&firstnumber)
-	fmt.Println("Введите второе число:")
-	fmt.Scan(&secondnumber)
 
-	resultOfadding := adding(firstnumber, secondnumber)
-	resultOfmulti := multi(firstnumber, secondnumber)
-	resultOfdiv := div(firstnumber, secondnumber)
-	resultOfminus := minus(firstnumber, secondnumber)
-	fmt.Println("Произведение числа a и b:", resultOfmulti)
-	fmt.Println("Сложение  a и b:", resultOfadding)
-	fmt.Println("Деление чисел a и b:", resultOfdiv)
-	fmt.Println("ВЫчитание чисел a и b:", resultOfminus)
+	if operation == "+" {
+		fmt.Println("Введите два числа:\nВведите первое чило:")
+		fmt.Scan(&firstnumber)
+		fmt.Println("Введите второе число:")
+		fmt.Scan(&secondnumber)
+		resultOfadding := adding(firstnumber, secondnumber)
+		fmt.Println("Сложение  a и b:", resultOfadding)
+	}
+	if operation == "-" {
+		fmt.Println("Введите два числа:\nВведите первое чило:")
+		fmt.Scan(&firstnumber)
+		fmt.Println("Введите второе число:")
+		fmt.Scan(&secondnumber)
+		resultOfminus := minus(firstnumber, secondnumber)
+		fmt.Println("ВЫчитание чисел a и b:", resultOfminus)
+	}
+	if operation == "*" {
+		fmt.Println("Введите два числа:\nВведите первое чило:")
+		fmt.Scan(&firstnumber)
+		fmt.Println("Введите второе число:")
+		fmt.Scan(&secondnumber)
+		resultOfmulti := multi(firstnumber, secondnumber)
+		fmt.Println("Произведение числа a и b:", resultOfmulti)
+	}
+
+	if operation == "/" {
+		fmt.Println("Введите два числа:\nВведите первое чило:")
+		fmt.Scan(&firstnumber)
+		fmt.Println("Введите второе число:")
+		fmt.Scan(&secondnumber)
+		resultOfdiv := div(firstnumber, secondnumber)
+		fmt.Println("Деление чисел a и b:", resultOfdiv)
+	}
+
 }
 func adding(a int, b int) (z int) {
 	z = a + b
